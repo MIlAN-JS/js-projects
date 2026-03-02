@@ -1,5 +1,8 @@
 const screen   = document.querySelector(".screen")
 const increaseBtn = document.querySelector(".increase")
+const decreaseBtn = document.querySelector(".decrease")
+const addFiveBtn = document.querySelector(".addFive")
+const minusFiveBtn = document.querySelector(".minusFive")
 
 const resetBtn= document.querySelector(".reset")
 
@@ -19,6 +22,18 @@ increaseBtn.addEventListener("click" , function(){
     
 
 })
+decreaseBtn.addEventListener("click" , function(){
+
+    if(counter > 0){
+        counter--
+        screen.textContent = counter
+    }else{
+        window.alert("cannot decrease counter")
+    }
+
+    
+
+})
 
 
 resetBtn.addEventListener("click"  , function(){
@@ -32,6 +47,22 @@ resetBtn.addEventListener("click"  , function(){
     }
 
 })
+
+addFiveBtn.addEventListener("click"  , function(){
+
+    counter = counter+ 5
+    screen.textContent = counter
+
+})
+
+minusFiveBtn.addEventListener("click"  , function(){
+
+    counter = counter- 5
+    screen.textContent = counter
+
+})
+
+
 
 
 
