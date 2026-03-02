@@ -30,6 +30,7 @@ function colorGenerator(){
 
 
 // html element lai select gareko 
+
 const background = document.querySelector(".background")
 const button  = document.querySelector(".change-btn")
 
