@@ -4,9 +4,7 @@ const ul = document.querySelector("ul")
 
 
 
-
-createBtn.addEventListener("click", function(){
-
+function createList(){
 
     
 
@@ -33,10 +31,19 @@ createBtn.addEventListener("click", function(){
     input.value = ""
 
 
+}
 
 
+createBtn.addEventListener("click", createList)
 
+input.addEventListener("keydown",(e)=>{
 
+    if(e.key === "Enter"){
+    
+createList()
+
+    }
+  
 })
 
 
