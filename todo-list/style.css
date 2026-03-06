@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+
+}
+
+
+section.todo-container{
+
+    height: auto;
+    min-height: 400px;
+    width: 500px;
+    border: 2px solid red;
+     border-radius: 0.5rem;
+
+}
+
+.input-container{
+    height: fit-content;
+    width: 100%;
+  border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.input-container input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    outline: none;
+     border-radius: 0.5rem;
+}
+
+.input-container button{
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #B2AEFF;
+
+}
+
+.todo-task-container{
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: white;
+    border: 2px solid green;
+    min-height: 400px;
+
+}
+
+.todo-item{
+    min-height: 60px;
+    height: auto;
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+color: white;
+    padding: 0 1rem;
+    gap: 0.5rem;
+
+}
+
+.btn-container{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.btn-container .delete{
+    background-color: red;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+
+}
+.btn-container .completed{
+    background-color: green;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    color: white;
+
+}
+
+
+
+.fruit-container{
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+    color: white;
+}
