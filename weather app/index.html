@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <script src="./script.js" defer></script>
+
+</head>
+<body>
+
+  <!-- ========================
+       MAIN WEATHER CARD
+  ======================== -->
+  <div class="weather-card">
+
+    <!-- LEFT PANEL: City info -->
+    <div class="left-panel">
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" class="input"  placeholder="Search city..." />
+        <span class="search">🔍</span>
+      </div>
+
+      <!-- Weather Icon (using emoji for simplicity) -->
+      <div class="weather-icon">⛅</div>
+
+      <!-- Temperature -->
+      <div class="temperature">31°C</div>
+
+      <!-- Weather Description -->
+      <div class="weather-desc">Mostly Cloudy</div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Date & Time -->
+      <div class="date-time">
+        <span class="date">21-July-2023</span> <br/>
+        <span class="day">Friday</span> <br/>
+        <span class="time"></span>
+      </div>
+
+      <!-- City Name -->
+      <div class="city-name">Dhaka</div>
+
+    </div>
+    <!-- End Left Panel -->
+
+    <!-- RIGHT PANEL: Weather details -->
+    <div class="right-panel">
+
+      <!-- Tab Buttons -->
+      <div class="tabs">
+        <button class="tab-btn active">Today</button>
+        <button class="tab-btn">Tomorrow</button>
+      </div>
+
+      <!-- Info Cards Grid -->
+      <div class="info-grid">
+
+        <!-- Card 1: Wind -->
+        <div class="info-card">
+          <div class="label">Wind</div>
+          <div class="value wind-value">6 km/h</div>
+          <div class="sub">East</div>
+        </div>
+
+        <!-- Card 2: Humidity -->
+        <div class="info-card">
+          <div class="label">Humidity</div>
+          <div class="value humidity-value">69%</div>
+        </div>
+
+        <!-- Card 3: Real Feel -->
+        <div class="info-card">
+          <div class="label">Real Feel</div>
+          <div class="value feels_like">31°C</div>
+        </div>
+
+       
+
+        <!-- Card 5: Pressure -->
+        <div class="info-card">
+          <div class="label">Pressure</div>
+          <div class="value pressure">1000 mb</div>
+        </div>
+
+      
+      
+        <!-- Card 8: Sun -->
+        <div class="info-card">
+          <div class="label">Sun</div>
+          <div class="sun-moon-row">
+            <span>Rise</span><span class="sunrise">5.17 am</span>
+          </div>
+          <div class="sun-moon-row">
+            <span>Set</span><span class="sunset">5.17 am</span>
+          </div>
+        </div>
+
+        <!-- Card 9: Moon -->
+        <div class="info-card">
+          <div class="label">Moon</div>
+          <div class="sun-moon-row">
+            <span>Rise</span><span>5.17 am</span>
+          </div>
+          <div class="sun-moon-row">
+            <span>Set</span><span>5.17 am</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- End Info Grid -->
+
+      <!-- Footer -->
+      <div class="footer-text">
+        All Data Provided by <span>Dholu dost</span>
+      </div>
+
+    </div>
+    <!-- End Right Panel -->
+
+  </div>
+  <!-- End Weather Card -->
+
+  <script>
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove 'active' from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add 'active' to the clicked tab
+        tab.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
